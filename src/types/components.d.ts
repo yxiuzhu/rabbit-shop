@@ -9,5 +9,6 @@ declare module 'vue' {
 }
 
 // 组件实例类型
+// InstanceType 代表实例的类型
 export type XtxGuessInstance = InstanceType<typeof XtxGuess>
 export type XtxSwiperInstance = InstanceType<typeof XtxSwiper>

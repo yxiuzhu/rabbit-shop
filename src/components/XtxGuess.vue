@@ -5,13 +5,14 @@ import type { GuessItem } from '@/types/home'
 import { onMounted, ref } from 'vue'
 
 // 分页参数
+// TS函数 Required ： 可选转为必选
 const pageParams: Required<PageParams> = {
-  page: 1,
+  page: 31,
   pageSize: 10,
 }
 // 猜你喜欢的列表
 const guessList = ref<GuessItem[]>([])
-// 已结束标记
+// 分页请求函数：已结束标记
 const finish = ref(false)
 // 获取猜你喜欢数据
 const getHomeGoodsGuessLikeData = async () => {
