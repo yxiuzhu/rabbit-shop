@@ -66,6 +66,8 @@ const onRefresherrefresh = async () => {
   <!-- 自定义导航栏 -->
   <CustomNavbar />
   <!-- 滚动容器 -->
+  <!-- refresher-enabled 开启下拉刷新 -->
+  <!-- refresher-triggered 控制下来刷新动画 -->
   <scroll-view
     enable-back-to-top
     refresher-enabled

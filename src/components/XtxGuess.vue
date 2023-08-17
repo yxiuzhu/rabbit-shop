@@ -7,7 +7,7 @@ import { onMounted, ref } from 'vue'
 // 分页参数
 // TS函数 Required ： 可选转为必选
 const pageParams: Required<PageParams> = {
-  page: 31,
+  page: 1,
   pageSize: 10,
 }
 // 猜你喜欢的列表
