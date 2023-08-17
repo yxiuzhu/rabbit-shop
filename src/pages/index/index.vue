@@ -23,9 +23,16 @@ const getHomeCategoryData = async () => {
   categoryList.value = res.result
 }
 
+// 获取热门推荐数据
+const hotList = ref<HotItem[]>([])
+const getHomeHotData = async () => {
+  const res = await getHomeHotAPI()
+  hotList.value = res.result
+}
+
 // 小程序特有的钩子函数：onLoad 页面加载
 onLoad(async () => {
-  await Promise.all([getHomeBannerData(), getHomeCategoryData()])
+  await Promise.all([getHomeBannerData(), getHomeCategoryData(), getHomeHotData()])
 })
 </script>
 
