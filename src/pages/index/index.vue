@@ -32,9 +32,14 @@ const getHomeHotData = async () => {
   hotList.value = res.result
 }
 
+// 是否加载中标记
+const isLoading = ref(false)
+
 // 小程序特有的钩子函数：onLoad 页面加载
 onLoad(async () => {
+  isLoading.value = true
   await Promise.all([getHomeBannerData(), getHomeCategoryData(), getHomeHotData()])
+  isLoading.value = false
 })
 
 // 猜你喜欢组合式函数调用
