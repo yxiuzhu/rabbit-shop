@@ -11,3 +11,17 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+# root = true：这表示这个 .editorconfig 文件是项目的顶级配置文件。其他编辑器配置文件不会影响此处定义的规则。
+
+# [*]：这个部分指定了默认的规则，适用于所有类型的文件。
+
+# indent_style = space：使用空格作为缩进风格。
+# indent_size = 2：每个缩进级别使用 2 个空格。
+# end_of_line = lf：使用 LF（换行）作为行尾分隔符。
+# charset = utf-8：指定字符集为 UTF-8。
+# trim_trailing_whitespace = true：自动移除行尾的空格。
+# insert_final_newline = true：在文件结尾插入一个空行。
+# [*.md]：这个部分指定了 .md 扩展名的 Markdown 文件的特定规则。
+
+# trim_trailing_whitespace = false：在 Markdown 文件中不移除行尾的空格。与默认规则中的不同。

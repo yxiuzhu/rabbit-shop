@@ -16,7 +16,6 @@ const urlMap = [
 const query = defineProps<{
   type: string
 }>()
-console.log(query)
 const currUrlMap = urlMap.find((v) => v.type === query.type)
 // 动态设置标题
 uni.setNavigationBarTitle({ title: currUrlMap!.title })
@@ -34,7 +33,6 @@ const getHotRecommendData = async () => {
     page: import.meta.env.DEV ? 30 : 1,
     pageSize: 10,
   })
-  // console.log(res.result.title)
   bannerPicture.value = res.result.bannerPicture
   subTypes.value = res.result.subTypes
 }
@@ -46,8 +44,10 @@ onLoad(() => {
 
 // 滚动触底
 const onScrolltolower = async () => {
-  // 获取当前选项
+  // 获取当前需要加载的选项
   const currsubTypes = subTypes.value[activeIndex.value]
+  console.log('currsubTypes', currsubTypes)
+
   // 分页条件
   if (currsubTypes.goodsItems.page < currsubTypes.goodsItems.pages) {
     // 当前页码累加
