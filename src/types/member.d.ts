@@ -11,6 +11,7 @@ type BaseProfile = {
 }
 
 /** 小程序登录 登录用户信息 */
+// & 交叉类型
 export type LoginResult = BaseProfile & {
   /** 手机号 */
   mobile: string
