@@ -22,7 +22,7 @@
         <view class="input">
           <text
             class="icon-search sk-transparent sk-text-14-2857-151 sk-text sk-pseudo sk-pseudo-circle"
-            >女靴</text
+            >搜索你要的宝贝</text
           >
         </view>
       </view>

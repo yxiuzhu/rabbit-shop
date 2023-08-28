@@ -2,7 +2,7 @@ import type { XtxGuessInstance } from '@/types/components'
 import { ref } from 'vue'
 
 /**
- * 猜你喜欢组合式函数
+ * 猜你喜欢-组合式函数
  */
 export const useGuessList = () => {
   // 获取猜你喜欢组件实例

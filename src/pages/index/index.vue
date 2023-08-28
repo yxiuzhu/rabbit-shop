@@ -8,7 +8,7 @@ import { ref } from 'vue'
 import CustomNavbar from './components/CustomNavbar.vue'
 import CategoryPanel from './components/CategoryPanel.vue'
 import HotPanel from './components/HotPanel.vue'
-import PageSkeleton from './components/PageSkeleton.vue'
+import IndexPageSkeleton from './components/IndexPageSkeleton.vue'
 
 import { useGuessList } from '@/composables'
 
@@ -43,7 +43,7 @@ onLoad(async () => {
   isLoading.value = false
 })
 
-// 猜你喜欢组合式函数调用
+// 猜你喜欢  使用组合式函数调用
 const { guessRef, onScrolltolower } = useGuessList()
 // 当前下拉刷新状态
 const isTriggered = ref(false)
@@ -83,7 +83,7 @@ const onRefresherrefresh = async () => {
     class="scroll-view"
     scroll-y
   >
-    <PageSkeleton v-if="isLoading" />
+    <IndexPageSkeleton v-if="isLoading" />
     <template v-else>
       <!-- 自定义轮播图 -->
       <XtxSwiper :list="bannerList" />
