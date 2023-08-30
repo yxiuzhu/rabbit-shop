@@ -32,7 +32,7 @@ const loginSuccess = (profile: LoginResult) => {
   memberStore.setProfile(profile)
   // 成功提示
   uni.showToast({ icon: 'success', title: '登录成功' })
-  // setTimeou t 是为了让登录成功的提示显示
+  // setTimeout 是为了让登录成功的提示显示
   setTimeout(() => {
     // 页面跳转 switchTab：跳转到tab页面只能用 switchTab 方法
     uni.switchTab({ url: '/pages/my/my' })
