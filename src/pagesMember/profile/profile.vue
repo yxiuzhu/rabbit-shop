@@ -41,7 +41,7 @@ const onAvatarChange = () => {
             const avatar = JSON.parse(res.data).result.avatar
             // 个人信息页数据更新
             profile.value!.avatar = avatar
-            // Store头像更新
+            // Store头像更新 保证个人中心的头像更新
             memberStore.profile!.avatar = avatar
             uni.showToast({ icon: 'success', title: '更新成功' })
           } else {
