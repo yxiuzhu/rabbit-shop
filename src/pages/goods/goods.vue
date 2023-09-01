@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type {
-  SkuPopupEvent,
-  SkuPopupInstance,
-  SkuPopupLocaldata,
-} from '@/components/vk-data-goods-sku-popup/vk-data-goods-sku-popup'
-import { postMemberCartAPI } from '@/services/cart'
+// import type {
+//   SkuPopupEvent,
+//   SkuPopupInstance,
+//   SkuPopupLocaldata,
+// } from '@/components/vk-data-goods-sku-popup/vk-data-goods-sku-popup'
+// import { postMemberCartAPI } from '@/services/cart'
 import { getGoodsByIdAPI } from '@/services/goods'
 import type { GoodsResult } from '@/types/goods'
 import { onLoad } from '@dcloudio/uni-app'

@@ -24,7 +24,7 @@ export type GoodsResult = {
   /** 可选规格集合备注[ 可选规格信息 ] */
   specs: SpecItem[]
   /** 用户地址列表[ 地址信息 ] */
-  userAddresses: AddressItem[]
+  userAddresses: []
 }
 
 /** 商品详情: 包含详情属性 + 详情图片 */

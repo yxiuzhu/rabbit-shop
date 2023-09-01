@@ -133,6 +133,7 @@ const onSubmit = async () => {
         </view>
         <view class="form-item">
           <text class="label">生日</text>
+          <!-- 日期-选择器 -->
           <picker
             @change="onBirthdayChange"
             mode="date"
