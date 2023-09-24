@@ -12,7 +12,7 @@ const getMemberAddressData = async () => {
   addressList.value = res.result
 }
 
-// 初始化调用(页面显示的时候都会调用 )
+// 初始化调用(页面显示的时候都会调用 使用 onShow 替代 onLoad)
 onShow(() => {
   getMemberAddressData()
 })
