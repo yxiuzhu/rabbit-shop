@@ -1,10 +1,10 @@
 <script setup lang="ts">
-// import type {
-//   SkuPopupEvent,
-//   SkuPopupInstance,
-//   SkuPopupLocaldata,
-// } from '@/components/vk-data-goods-sku-popup/vk-data-goods-sku-popup'
-// import { postMemberCartAPI } from '@/services/cart'
+import type {
+  SkuPopupEvent,
+  SkuPopupInstance,
+  SkuPopupLocaldata,
+} from '@/components/vk-data-goods-sku-popup/vk-data-goods-sku-popup'
+import { postMemberCartAPI } from '@/services/cart'
 import { getGoodsByIdAPI } from '@/services/goods'
 import type { GoodsResult } from '@/types/goods'
 import { onLoad } from '@dcloudio/uni-app'
@@ -31,10 +31,10 @@ const getGoodsByIdData = async () => {
     _id: res.result.id,
     name: res.result.name,
     goods_thumb: res.result.mainPictures[0],
-    spec_list: res.result.specs.map((v) => {
+    spec_list: res.result.specs.map((item) => {
       return {
-        name: v.name,
-        list: v.values,
+        name: item.name,
+        list: item.values,
       }
     }),
     sku_list: res.result.skus.map((v) => {
@@ -43,7 +43,7 @@ const getGoodsByIdData = async () => {
         goods_id: res.result.id,
         goods_name: res.result.name,
         image: v.picture,
-        price: v.price * 100, // 注意：需要乘以 100
+        price: v.price * 100, // 注意：插件要求，需要乘以 100
         stock: v.inventory,
         sku_name_arr: v.specs.map((vv) => vv.valueName),
       }
