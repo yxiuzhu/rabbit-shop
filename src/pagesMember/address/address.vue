@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { deleteMemberAddressByIdAPI, getMemberAddressAPI } from '@/services/address'
-import { useAddressStore } from '@/stores/modules/address'
+// import { useAddressStore } from '@/stores/modules/address'
 import type { AddressItem } from '@/types/address'
 import { onShow } from '@dcloudio/uni-app'
 import { ref } from 'vue'
